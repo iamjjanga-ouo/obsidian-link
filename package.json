@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-link",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Convert Obsidian URI to HTTPS redirect URL for better compatibility with external platforms",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
