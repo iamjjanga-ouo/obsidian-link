@@ -6,3 +6,22 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+/* Security warning styling in settings */
+.obsidian-link-security-warning {
+	background-color: var(--background-modifier-error);
+	border-left: 3px solid var(--text-error);
+	padding: 12px;
+	margin-bottom: 16px;
+	border-radius: 4px;
+}
+
+.obsidian-link-security-warning .setting-item-name {
+	color: var(--text-error);
+	font-weight: 600;
+}
+
+.obsidian-link-security-warning .setting-item-description {
+	color: var(--text-normal);
+	opacity: 0.9;
+}

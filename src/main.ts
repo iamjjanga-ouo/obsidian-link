@@ -40,7 +40,9 @@ export default class ObsidianLinkPlugin extends Plugin {
 		const vaultName = this.app.vault.getName();
 		const filePath = file.path;
 
-		// Encode vault name and file path
+		// Security: Use encodeURIComponent() to prevent XSS/Injection attacks
+		// This encoding ensures special characters (<, >, ", ', /, etc.) are safely escaped,
+		// preventing malicious scripts from being injected into shared URLs
 		const encodedVault = encodeURIComponent(vaultName);
 		const encodedFile = encodeURIComponent(filePath);
 
@@ -50,6 +52,9 @@ export default class ObsidianLinkPlugin extends Plugin {
 	/**
 	 * Transform Obsidian URI to HTTPS URL
 	 * Formula: [Target URL] + [Query String of Obsidian URI]
+	 *
+	 * Security Note: Query string is already URL-encoded in generateObsidianUri(),
+	 * so it's safe to concatenate directly without re-encoding.
 	 */
 	private transformToHttpsUrl(obsidianUri: string): string {
 		const targetUrl = this.settings.targetUrl || DEFAULT_SETTINGS.targetUrl;
@@ -96,7 +101,8 @@ export default class ObsidianLinkPlugin extends Plugin {
 			new Notice('Obsidian Link copied to clipboard');
 
 		} catch (error) {
-			console.error('Error copying Obsidian Link:', error);
+			// Security: Avoid logging sensitive file paths or vault information in production
+			console.error('Error copying Obsidian Link');
 			new Notice('Failed to copy Obsidian Link');
 		}
 	}
