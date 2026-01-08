@@ -98,12 +98,12 @@ export default class ObsidianLinkPlugin extends Plugin {
 			await navigator.clipboard.writeText(httpsUrl);
 
 			// Show success notification
-			new Notice('Obsidian link copied to clipboard');
+			new Notice('Link copied to clipboard');
 
 		} catch {
 			// Security: Avoid logging sensitive file paths or vault information in production
-			console.error('Error copying Obsidian Link');
-			new Notice('Failed to copy Obsidian link');
+			console.error('Error copying Obsidian link');
+			new Notice('Failed to copy link');
 		}
 	}
 }

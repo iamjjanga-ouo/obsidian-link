@@ -23,18 +23,18 @@ export class ObsidianLinkSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Obsidian link settings')
+			.setName('Obsidian link')
 			.setHeading();
 
 		// Security warning about changing target URL
 		new Setting(containerEl)
-			.setName('⚠️ Security notice')
-			.setDesc('Changing the target URL may expose you to security risks. Only use redirect services you trust. The default URL (go.obsidian-link.com) is recommended.')
+			.setName('Security notice')
+			.setDesc('Only use redirect services you trust, as changing the target URL may expose you to security risks.')
 			.setClass('obsidian-link-security-warning');
 
 		new Setting(containerEl)
 			.setName('Target URL')
-			.setDesc('Base URL for the redirection service. Ensure your server redirects to the obsidian:// URI scheme.')
+			.setDesc('Base URL for the redirection service that transforms Obsidian links into shareable HTTPS links.')
 			.addText(text => text
 				.setPlaceholder('https://go.obsidian-link.com')
 				.setValue(this.plugin.settings.targetUrl)
