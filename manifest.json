@@ -1,7 +1,7 @@
 {
     "id": "redirect-link-https-to-local",
     "name": "Redirect HTTPS to Local",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "minAppVersion": "0.15.0",
     "description": "Convert redirect HTTPS to local redirect URL for better compatibility with external platforms.",
     "author": "iamjjanga",
