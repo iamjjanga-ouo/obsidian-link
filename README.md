@@ -1,4 +1,4 @@
-# Obsidian Link
+# Obsidian Link(Redirect Obsidian URL from HTTPS to Local)
 
 Convert Obsidian's native `obsidian://` URIs to HTTPS redirect URLs for better compatibility with external platforms like Slack, Notion, and web forums.
 
