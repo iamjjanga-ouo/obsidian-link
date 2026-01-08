@@ -12,7 +12,7 @@ export default class ObsidianLinkPlugin extends Plugin {
 			id: 'copy-obsidian-link',
 			name: 'Copy Link',
 			callback: () => {
-				this.copyObsidianLink();
+				void this.copyObsidianLink();
 			}
 		});
 
