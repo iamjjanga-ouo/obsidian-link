@@ -1,10 +1,10 @@
 {
-	"id": "obsidian-link",
-	"name": "Obsidian Link",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Convert Obsidian URI to HTTPS redirect URL for better compatibility with external platforms.",
-	"author": "iamjjanga",
-	"authorUrl": "https://github.com/iamjjanga-ouo",
-	"isDesktopOnly": false
+    "id": "redirect-link-https-to-local",
+    "name": "Redirect HTTPS to Local",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "Convert redirect HTTPS to local redirect URL for better compatibility with external platforms.",
+    "author": "iamjjanga",
+    "authorUrl": "https://github.com/iamjjanga-ouo",
+    "isDesktopOnly": true
 }
