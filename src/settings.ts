@@ -22,7 +22,9 @@ export class ObsidianLinkSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		containerEl.createEl('h2', {text: 'Obsidian Link Settings'});
+		new Setting(containerEl)
+			.setName('Obsidian Link Settings')
+			.setHeading();
 
 		// Security warning about changing target URL
 		new Setting(containerEl)
