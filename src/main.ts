@@ -10,7 +10,7 @@ export default class ObsidianLinkPlugin extends Plugin {
 		// Add command to copy Obsidian Link
 		this.addCommand({
 			id: 'copy-obsidian-link',
-			name: 'Copy Link',
+			name: 'Copy link',
 			callback: () => {
 				void this.copyObsidianLink();
 			}
@@ -98,12 +98,12 @@ export default class ObsidianLinkPlugin extends Plugin {
 			await navigator.clipboard.writeText(httpsUrl);
 
 			// Show success notification
-			new Notice('Obsidian Link copied to clipboard');
+			new Notice('Obsidian link copied to clipboard');
 
-		} catch (error) {
+		} catch {
 			// Security: Avoid logging sensitive file paths or vault information in production
 			console.error('Error copying Obsidian Link');
-			new Notice('Failed to copy Obsidian Link');
+			new Notice('Failed to copy Obsidian link');
 		}
 	}
 }
